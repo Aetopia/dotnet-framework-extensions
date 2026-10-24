@@ -1,5 +1,7 @@
 using System.IO;
+using System.IO.Extensions;
 using System.Text;
+using static System.Text.Encoding;
 
 namespace System.Runtime.Serialization.Json.Extensions;
 
@@ -40,10 +42,7 @@ partial class JsonSerializer
         MemoryStream stream = new();
         Serialize(stream, value);
 
-        fixed (byte* ptr = stream.GetBuffer())
-        {
-            var count = (int)stream.Length;
-            return Encoding.UTF8.GetString(ptr, count);
-        }
+        fixed (byte* bytes = stream.GetBuffer())
+            return UTF8.GetString(bytes, (int)stream.Length);
     }
 }

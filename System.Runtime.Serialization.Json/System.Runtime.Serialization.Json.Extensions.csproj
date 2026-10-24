@@ -12,4 +12,8 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../System.IO/System.IO.Extensions.csproj" />
+  </ItemGroup>
+
 </Project>

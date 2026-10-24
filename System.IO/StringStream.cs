@@ -1,13 +1,12 @@
-using System.IO;
 using System.Runtime.InteropServices;
 
-namespace System.Runtime.Serialization.Json.Extensions;
+namespace System.IO.Extensions;
 
-unsafe sealed class StringStream : UnmanagedMemoryStream
+public unsafe sealed class StringStream : UnmanagedMemoryStream
 {
     readonly GCHandle _handle;
 
-    internal StringStream(string value)
+    public StringStream(string value)
     {
         _handle = GCHandle.Alloc(value, GCHandleType.Pinned);
 

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+
+    <Optimize>true</Optimize>
+    <PublishRelease>true</PublishRelease>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <Nullable>Enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web.Extensions" />
+    <ProjectReference Include="../System.IO/System.IO.Extensions.csproj" />
+  </ItemGroup>
+
+</Project>
