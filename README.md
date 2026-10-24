@@ -15,4 +15,4 @@ Provides extensions for some inbuilt .NET Framework libraries.
 - [`JsonSerializer`](System.Runtime.Serialization.Json/JsonSerializer.cs)
     > Provides a convenient & basic wrapper for dealing with JSON. 
     - Provides a wrapper on top of `DataContractJsonSerializer`.
-    - Provides serialization & deserialization from [strings](System.Runtime.Serialization.Json/StringStream.cs) & streams.
+    - Provides serialization & deserialization from [strings](System.IO/StringStream.cs) & streams.
